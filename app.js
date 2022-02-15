@@ -32,7 +32,7 @@ playButton.addEventListener("click", function() {
 
                 // Creo il div con classe square
                 let square = document.createElement("div");
-                square.classList.add("square");
+                square.classList.add("square" + -i);
                 square.style.width = `calc(100% / 10)`;
 
                 // Aggiunto i quadratini dentro il container_main
