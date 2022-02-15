@@ -39,3 +39,30 @@ header{
 .play{
     padding: 0 20px;
 }
+
+main{
+    background-color: #7fffd4;
+    height: calc(100vh - 110px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_main{
+    width: 680px;
+    aspect-ratio: 1;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+[class*= "square"]{
+    border: 1px solid black;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
