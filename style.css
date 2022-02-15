@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 110px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 80px;
+    background-color: white;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.seleziona-difficoltà{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#select-difficulty{
+    padding-right: 30px;
+}
+
+.play{
+    padding: 0 20px;
+}
