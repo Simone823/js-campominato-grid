@@ -41,17 +41,37 @@ header{
 }
 
 main{
-    background-color: #7fffd4;
+
+    background-image: linear-gradient(
+        35deg,
+        hsl(0deg 0% 0%) 1%,
+        hsl(137deg 100% 10%) 37%,
+        hsl(137deg 100% 21%) 45%,
+        hsl(137deg 100% 31%) 49%,
+        hsl(137deg 100% 37%) 50%,
+        hsl(137deg 100% 26%) 51%,
+        hsl(137deg 100% 16%) 51%,
+        hsl(138deg 100% 5%) 50%,
+        hsl(138deg 100% 5%) 50%,
+        hsl(137deg 100% 16%) 49%,
+        hsl(137deg 100% 26%) 49%,
+        hsl(137deg 100% 37%) 50%,
+        hsl(137deg 100% 31%) 51%,
+        hsl(137deg 100% 21%) 55%,
+        hsl(137deg 100% 10%) 63%,
+        hsl(0deg 0% 0%) 99%
+      );
     height: calc(100vh - 110px);
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .container_main{
     width: 680px;
     aspect-ratio: 1;
-    border: 2px solid black;
+    border: 2px solid white;
     display: flex;
     flex-wrap: wrap;
     border-radius: 20px;
@@ -59,7 +79,7 @@ main{
 }
 
 [class*= "square"]{
-    border: 1px solid black;
+    border: 1px solid white;
     aspect-ratio: 1;
     display: flex;
     justify-content: center;
