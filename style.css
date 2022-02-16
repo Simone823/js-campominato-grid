@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
+    font-family: 'Indie Flower', cursive;
+    letter-spacing: 2px;
+    font-size: 16px;
 }
 
 body{
@@ -27,6 +30,10 @@ header{
     align-items: center;
     gap: 10px;
     flex-grow: 1;
+}
+
+.logo h1{
+    font-size: 30px;
 }
 
 .logo img{
