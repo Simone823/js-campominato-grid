@@ -68,7 +68,6 @@ const startGame = () => {
 
         case "hard":
             console.log("difficoltà hard");
-            containerMain.style.backgroundColor = "red";
 
             // Ciclo for per creare div square e numeri fino a 100
             for (let i = 1; i < 82; i++) {
