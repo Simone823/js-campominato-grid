@@ -23,6 +23,11 @@ playButton.addEventListener("click", function() {
 
     switch (selectedOption) {
 
+        case "----Seleziona un livello----":
+            console.log("non valido");
+            confirm("Seleziona un livello e gioca!");
+            break;
+
 
         case "easy":
             console.log("difficoltà easy");
