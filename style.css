@@ -22,6 +22,11 @@ header{
     flex-grow: 1;
 }
 
+.logo img{
+    width: 80px;
+    display: block;
+}
+
 .buttons{
     display: flex;
     align-items: center;
