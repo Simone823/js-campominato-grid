@@ -11,15 +11,28 @@ const containerMain = document.querySelector(".container_main");
 console.log(containerMain);
 
 
-// Al clic del pulsante play leggo l'input della select
-playButton.addEventListener("click", function() {
+// Funzione start game
+const startGame = () => {
 
     containerMain.innerHTML = "";
 
     // Costante contenente il valore dell'opzione selezionata
     let selectedOption = selectElement.options[selectElement.selectedIndex].value;
     console.log(selectedOption);
-    
+
+    function squareActive() {
+
+        // Dichiaro una varibiale con il valore dell'elemento cliccato
+        const squareClicked = this;
+        console.log(squareClicked);
+
+        // Aggiungo la classe active a square
+        squareClicked.classList.add("active");
+
+        // Una volta cliccato l'elemento, al secondo click non cambia nulla
+        squareClicked.removeEventListener ("click", squareActive); 
+    }
+
 
     switch (selectedOption) {
 
@@ -45,13 +58,17 @@ playButton.addEventListener("click", function() {
 
                 // Aggiungo i numeri all'interno di square
                 square.innerHTML = i;
+
+                square.addEventListener("click", squareActive); 
+
             }
 
-            
+
             break;
-    
+
         case "hard":
             console.log("difficoltà hard");
+            containerMain.style.backgroundColor = "red";
 
             // Ciclo for per creare div square e numeri fino a 100
             for (let i = 1; i < 82; i++) {
@@ -67,8 +84,8 @@ playButton.addEventListener("click", function() {
                 // Aggiungo i numeri all'interno di square
                 square.innerHTML = i;
 
+                square.addEventListener("click", squareActive); 
 
-                
             }
 
             break;
@@ -84,15 +101,22 @@ playButton.addEventListener("click", function() {
                 let square = document.createElement("div");
                 square.classList.add("square" + -i);
                 square.style.width = `calc(100% / 7)`;
-                
+
 
                 // Aggiunto i quadratini dentro il container_main
                 containerMain.append(square);
 
                 // Aggiungo i numeri all'interno di square
                 square.innerHTML = i;
+
+                square.addEventListener("click", squareActive); 
             }
             break;
     }
-        
-})
+
+    
+
+}
+
+// Al clic del pulsante play attivo la funzione start game
+playButton.addEventListener("click", startGame);
