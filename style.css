@@ -174,3 +174,8 @@ footer p span:hover{
     transform: scale(1.05);
     transition: all 240ms linear;
 }
+
+.active{
+    background-color: #4169e1;
+
+}
